@@ -19,6 +19,10 @@ module Persistence
         attribute :forks_count, Types::Strict::Int
         attribute :open_issues_count, Types::Strict::Int
       end
+
+      def by_language(l)
+        where { language.ilike("%#{l}%") }.to_a
+      end
     end
   end
 end

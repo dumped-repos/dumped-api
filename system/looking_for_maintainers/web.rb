@@ -17,14 +17,11 @@ module LookingForMaintainers
     plugin :error_handler
     plugin :flash
     plugin :multi_route
+    plugin :json
+    plugin :all_verbs
 
     route do |r|
-      # Enable this after writing your first web/routes/ file
-      # r.multi_route
-
-      r.root do
-        r.view "welcome"
-      end
+      r.multi_route
     end
 
     error do |e|
