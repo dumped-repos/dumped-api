@@ -2,9 +2,9 @@
 
 require "slim"
 require "dry/view/controller"
-require "looking_for_maintainers/container"
+require "dumped_api/container"
 
-module LookingForMaintainers
+module DumpedApi
   module View
     class Controller < Dry::View::Controller
       configure do |config|

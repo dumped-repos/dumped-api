@@ -3,7 +3,7 @@ module Test
     module_function
 
     def app
-      LookingForMaintainers::Web.app
+      DumpedApi::Web.app
     end
   end
 end

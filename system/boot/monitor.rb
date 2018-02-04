@@ -1,4 +1,4 @@
-LookingForMaintainers::Container.boot :monitor do
+DumpedApi::Container.boot :monitor do
   init do
     require "dry/monitor"
   end

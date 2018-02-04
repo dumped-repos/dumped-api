@@ -1,4 +1,4 @@
-module LookingForMaintainers
+module DumpedApi
   module View
     class Context
       attr_reader :attrs

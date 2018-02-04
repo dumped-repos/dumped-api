@@ -2,7 +2,7 @@
 
 require "dry/transaction/operation"
 
-module LookingForMaintainers
+module DumpedApi
   class Operation
     def self.inherited(subclass)
       subclass.include Dry::Transaction::Operation

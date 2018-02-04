@@ -12,7 +12,7 @@ class FetchRepos < Thor
 
       repo_info = extract_repo_info(repo)
 
-      LookingForMaintainers::Container['repositories.git_repos'].create(repo_info)
+      DumpedApi::Container['repositories.git_repos'].create(repo_info)
     end
   end
 

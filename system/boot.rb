@@ -3,8 +3,8 @@ begin
 rescue LoadError
 end
 
-require_relative "looking_for_maintainers/container"
+require_relative "dumped_api/container"
 
-LookingForMaintainers::Container.finalize!
+DumpedApi::Container.finalize!
 
-require "looking_for_maintainers/web"
+require "dumped_api/web"

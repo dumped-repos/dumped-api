@@ -1,8 +1,8 @@
-require 'looking_for_maintainers/repository'
+require 'dumped_api/repository'
 
-module LookingForMaintainers
+module DumpedApi
   module Repositories
-    class GitRepos < LookingForMaintainers::Repository[:git_repos]
+    class GitRepos < DumpedApi::Repository[:git_repos]
       commands :create
 
       def all

@@ -1,4 +1,4 @@
-LookingForMaintainers::Container.boot :persistence, namespace: true do |system|
+DumpedApi::Container.boot :persistence, namespace: true do |system|
   init do
     require "sequel"
     require "rom"

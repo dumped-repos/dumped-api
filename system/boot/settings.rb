@@ -1,4 +1,4 @@
-LookingForMaintainers::Container.boot :settings, from: :system do
+DumpedApi::Container.boot :settings, from: :system do
   before :init do
     require "types"
   end

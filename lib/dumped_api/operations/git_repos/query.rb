@@ -1,10 +1,10 @@
-require 'looking_for_maintainers/operation'
-require 'looking_for_maintainers/import'
+require 'dumped_api/operation'
+require 'dumped_api/import'
 
-module LookingForMaintainers
+module DumpedApi
   module Operations
     module GitRepos
-      class Query < LookingForMaintainers::Operation
+      class Query < DumpedApi::Operation
 
         include Import['repositories.git_repos']
 

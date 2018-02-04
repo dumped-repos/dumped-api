@@ -1,4 +1,4 @@
-class LookingForMaintainers::Web
+class DumpedApi::Web
   route do |r|
     r.on 'api' do
       r.on 'v1' do

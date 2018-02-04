@@ -1,10 +1,10 @@
 # auto_register: false
 
 require "rom-repository"
-require "looking_for_maintainers/container"
-require "looking_for_maintainers/import"
+require "dumped_api/container"
+require "dumped_api/import"
 
-module LookingForMaintainers
+module DumpedApi
   class Repository < ROM::Repository::Root
     include Import.args["persistence.rom"]
   end

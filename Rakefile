@@ -2,7 +2,7 @@ require "bundler/setup"
 require "pry-byebug" unless ENV["RACK_ENV"] == "production"
 require "rom/sql/rake_task"
 require "shellwords"
-require_relative "system/looking_for_maintainers/container"
+require_relative "system/dumped_api/container"
 
 begin
   require "rspec/core/rake_task"
@@ -12,11 +12,11 @@ rescue LoadError
 end
 
 def db
-  LookingForMaintainers::Container["persistence.db"]
+  DumpedApi::Container["persistence.db"]
 end
 
 def settings
-  LookingForMaintainers::Container["settings"]
+  DumpedApi::Container["settings"]
 end
 
 def database_uri
@@ -35,7 +35,7 @@ end
 
 namespace :db do
   task :setup do
-    LookingForMaintainers::Container.init :persistence
+    DumpedApi::Container.init :persistence
   end
 
   desc "Print current database schema version"

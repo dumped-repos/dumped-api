@@ -1,7 +1,7 @@
 require 'db_spec_helper'
-require 'looking_for_maintainers/operations/git_repos/query'
+require 'dumped_api/operations/git_repos/query'
 
-RSpec.describe LookingForMaintainers::Operations::GitRepos::Query, "#call" do
+RSpec.describe DumpedApi::Operations::GitRepos::Query, "#call" do
   subject { described_class.new }
 
   before do

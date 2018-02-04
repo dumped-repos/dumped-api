@@ -1,7 +1,7 @@
 require "dry/web/roda/application"
 require_relative "container"
 
-module LookingForMaintainers
+module DumpedApi
   class Web < Dry::Web::Roda::Application
     configure do |config|
       config.container = Container
@@ -10,7 +10,7 @@ module LookingForMaintainers
 
     opts[:root] = Pathname(__FILE__).join("../..").realpath.dirname
 
-    use Rack::Session::Cookie, key: "looking_for_maintainers.session", secret: self["settings"].session_secret
+    use Rack::Session::Cookie, key: "dumped_api.session", secret: self["settings"].session_secret
 
     plugin :csrf, raise: true
     plugin :dry_view

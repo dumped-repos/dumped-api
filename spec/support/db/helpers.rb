@@ -3,11 +3,11 @@ module Test
     module_function
 
     def rom
-      LookingForMaintainers::Container["persistence.rom"]
+      DumpedApi::Container["persistence.rom"]
     end
 
     def db
-      LookingForMaintainers::Container["persistence.db"]
+      DumpedApi::Container["persistence.db"]
     end
   end
 end
