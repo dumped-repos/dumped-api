@@ -9,6 +9,10 @@ module DumpedApi
         git_repos.to_a
       end
 
+      def by_name(name)
+        git_repos.by_name(name).one!
+      end
+
       def by_language(language)
         git_repos.by_language(language)
       end

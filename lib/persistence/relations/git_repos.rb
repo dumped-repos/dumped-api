@@ -20,6 +20,10 @@ module Persistence
         attribute :open_issues_count, Types::Strict::Int
       end
 
+      def by_name(name)
+        where(name: name)
+      end
+
       def by_language(l)
         where { language.ilike("%#{l}%") }.to_a
       end
