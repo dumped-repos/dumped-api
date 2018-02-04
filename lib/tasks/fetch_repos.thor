@@ -23,9 +23,7 @@ class FetchRepos < Thor
       headers = response.headers
 
       next_link = extract_next_link(headers['Link'])
-      puts "Next link: #{next_link}"
       remaining_requests = headers['X-Ratelimit-Remaining']
-      puts "Remaining Requests: #{remaining_requests}"
       body_parsed = response.parse
 
       body_parsed['items'].each do |repo|
